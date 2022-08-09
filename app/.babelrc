@@ -1,0 +1,43 @@
+{
+  "presets": [
+    "module:metro-react-native-babel-preset",
+    "@babel/typescript"
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-export-namespace-from",
+    "babel-plugin-styled-components",
+    "module:react-native-dotenv",
+    [
+      "module-resolver",
+      {
+        "extensions": [".js", ".ts", ".tsx", ".ios.js", ".android.js", ".ios.ts", ".android.ts"],
+        "alias": {
+          "components": "./components",
+          "components/*": "./components/*",
+          "constants": "./constants",
+          "constants/*": "./constants/*",
+          "screens": "./screens",
+          "screens/*": "./screens/*",
+          "hooks": "./hooks",
+          "hooks/*": "./hooks/*",
+          "assets": "./assets",
+          "assets/*": "./assets/*",
+          "interaction": "./components/interaction",
+          "interaction/*": "./components/interaction/*",
+          "layout": "./components/layout",
+          "layout/*": "./components/layout/*",
+          "typography": "./components/typography",
+          "typography/*": "./components/typography/*",
+          "services": "./services",
+          "services/*": "./services/*",
+          "queries": "./queries",
+          "queries/*": "./queries/*",
+          "modules": "./modules",
+          "modules/*": "./modules/*"
+        }
+      }
+    ]
+  ]
+}

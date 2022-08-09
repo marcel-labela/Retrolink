@@ -1,0 +1,95 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "noImplicitAny": false,
+    "jsx": "react-native",
+    "lib": ["es2018"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "paths": {
+      "types": ["./types.tsx"],
+      "components": ["./components"],
+      "components/*": ["./components/*"],
+      "common": ["./components/common"],
+      "common/*": ["./components/common/*"],
+      "constants": ["./constants"],
+      "constants/*": [
+        "./constants/*"
+      ],
+      "screens": [
+        "./screens"
+      ],
+      "screens/*": [
+        "./screens/*"
+      ],
+      "hooks": [
+        "./hooks"
+      ],
+      "hooks/*": [
+        "./hooks/*"
+      ],
+      "assets": [
+        "./assets"
+      ],
+      "assets/*": [
+        "./assets/*"
+      ],
+      "interaction": [
+        "./components/interaction"
+      ],
+      "interaction/*": [
+        "./components/interaction/*"
+      ],
+      "layout": [
+        "./components/layout"
+      ],
+      "layout/*": [
+        "./components/layout/*"
+      ],
+      "typography": [
+        "components/common/typography"
+      ],
+      "typography/*": [
+        "components/common/typography/*"
+      ],
+      "services": [
+        "./services"
+      ],
+      "services/*": [
+        "./services/*"
+      ],
+      "queries": [
+        "./queries"
+      ],
+      "queries/*": [
+        "./queries/*"
+      ],
+      "modules": [
+        "./modules"
+      ],
+      "modules/*": [
+        "./modules/*"
+      ]
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "**/*.json",
+    "**/*.spec.ts"
+  ],
+  "extends": "expo/tsconfig.base"
+}
