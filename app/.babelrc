@@ -7,7 +7,6 @@
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-proposal-export-namespace-from",
-    "babel-plugin-styled-components",
     "module:react-native-dotenv",
     [
       "module-resolver",
