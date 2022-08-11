@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Alert, View, Text } from 'react-native';
+import { Alert } from 'react-native';
 import { useQueryClient } from 'react-query';
 
-// import { Container } from 'layout/Container';
-// import { Heading, Text } from 'components/common/typography';
-import { ActionLine } from 'components/interaction';
+import { Container } from 'layout/Container';
+import { Heading, Text } from 'components/common/typography';
+import { Button } from 'components/interaction';
 import { RootTabScreenProps } from '../../types';
 import { useQueryMe, useMutateDeleteMe } from 'queries/users';
 import { useAuthenticationActions } from 'hooks/useAuthentication';
@@ -44,8 +44,10 @@ export const ProfileScreen = ({ navigation }: RootTabScreenProps<'TabOne'>) => {
   }
 
   return (
-    <View>
-      <Text>ja tis goed</Text>
-    </View>
+    <Container placement="start">
+      <Heading>Profile screen</Heading>
+      <Text size={16}>Hello, {me.username}</Text>
+      <Button label="delete account" onPress={onPressDeleteAccountAction} />
+    </Container>
   );
 }

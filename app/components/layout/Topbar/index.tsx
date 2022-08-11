@@ -1,17 +1,17 @@
-// import * as React from 'react';
+import * as React from 'react';
 
-// import { Heading } from 'components/common/typography';
+import { Heading } from 'components/common/typography';
 
-// import { Container } from './styled';
+import { Container } from './styled';
 
-// export const TopBar: React.FC<TopBarProps> = ({ title: string }) => {
-//   return (
-//     <Container>
-//       <Heading>Title</Heading>
-//     </Container>
-//   );
-// }
+export const TopBar: React.FC<TopBarProps> = ({ title }) => {
+  return (
+    <Container>
+      <Heading>{title}</Heading>
+    </Container>
+  );
+}
 
-// type TopBarProps = {
-//   title?: string;
-// };
+type TopBarProps = {
+  title?: string;
+};

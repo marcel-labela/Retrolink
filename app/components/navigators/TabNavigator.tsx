@@ -3,7 +3,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { HomeScreen, ProfileScreen } from 'screens';
 import { Home, Profile } from 'components/common/svg';
-// import theme from 'constants/styles/theme';
 
 const TabsStack = createBottomTabNavigator();
 
@@ -31,14 +30,15 @@ const TabNavigator = () => (
       name="HomeScreen"
       component={HomeScreen}
       options={{
-        tabBarIcon: ({ color, focused }) => (
+        tabBarIcon: ({ color, focused }) => {
+        return (
           <Home
             width={20}
             height={21}
             focused={focused}
-            fill="red"
+            fill={color}
           />
-        ),
+        )},
           headerTitle: 'Home',
           tabBarLabel: 'Home',
           headerShown: true,
@@ -56,7 +56,6 @@ const TabNavigator = () => (
           headerShown: true,
         }}
     />
-    {/* Hier moet dan een andere navigator bij. */}
   </TabsStack.Navigator>
 )
 
