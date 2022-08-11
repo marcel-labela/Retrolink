@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Svg, { Path } from 'react-native-svg';
 
-import theme from '../../../constants/styles/theme';
+import theme from 'styles/theme';
 
 export const CheckMark: React.FC<CheckMarkProps> = ({
   fill = theme.colors.white,

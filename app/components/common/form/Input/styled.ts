@@ -9,11 +9,10 @@ export const StyledInput = styled.TextInput.attrs(({ theme }) => ({
   height: 51px;
   padding: 16px;
   font-size: 16px;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.secondary};
   font-family: ${({ theme }) => theme.fonts.regular['500']};
   border-radius: 10px;
-  ${({ theme }) => theme.shadows.listItem()};
   ${({ hasError }) => hasError && css`
     border-bottom-color: ${({ theme }) => theme.colors.error};
   `}

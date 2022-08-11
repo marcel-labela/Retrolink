@@ -4,7 +4,7 @@ import { useQueryClient } from 'react-query';
 
 import { Container } from 'layout/Container';
 import { Heading, Text } from 'components/common/typography';
-import { ActionLine } from 'components/interaction';
+import { Button } from 'components/interaction';
 import { RootTabScreenProps } from '../../types';
 import { useQueryMe, useMutateDeleteMe } from 'queries/users';
 import { useAuthenticationActions } from 'hooks/useAuthentication';
@@ -44,18 +44,10 @@ export const ProfileScreen = ({ navigation }: RootTabScreenProps<'TabOne'>) => {
   }
 
   return (
-    <Container placement="start" align="left">
-      <Heading>Hello, {me?.username}</Heading>
-      <Text>{me?.email}</Text>
-      <ActionLine
-        action={() => onPressDeleteAccountAction()}
-        label="Delete Account"
-        textColor="error"
-      />
-      <ActionLine
-        action={() => logout()}
-        label="Log out"
-      />
+    <Container placement="start">
+      <Heading>Profile screen</Heading>
+      <Text size={16}>Hello, {me.username}</Text>
+      <Button label="delete account" onPress={onPressDeleteAccountAction} />
     </Container>
   );
 }

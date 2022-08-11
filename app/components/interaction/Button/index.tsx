@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { TouchableOpacityProps } from 'react-native';
-
 import { Container, ButtonPressable, ButtonText } from './styled';
 
 export const Button: React.FC<ButtonProps> = ({

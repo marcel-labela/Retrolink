@@ -1,16 +1,15 @@
 import * as React from 'react';
 
-import { ScreenContainer, List, MainAction } from './styled';
+import { ScreenContainer, List } from './styled';
 
 export const Container: React.FC<ContainerProps> = ({
   placement = 'center',
   align,
   variant,
-  hasMainAction,
   children,
 }) => {
   return (
-    <ScreenContainer {...{ placement, align, variant, hasMainAction}}>
+    <ScreenContainer {...{ placement, align, variant}}>
       {children}
     </ScreenContainer>
   );
@@ -20,12 +19,10 @@ type ContainerProps = {
   placement?: 'center' | 'top' | 'start' | 'bottom';
   align?: 'left' | 'center';
   variant?: 'primary' | 'secondary';
-  hasMainAction?: boolean;
   children?: any;
 };
 
 export const Screen = {
   Container,
   List,
-  MainAction,
 };

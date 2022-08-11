@@ -2,13 +2,13 @@ import * as React from 'react';
 import { QueryClientProvider } from 'react-query';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components/native';
+import themeRetroLink from './styles/theme';
 
 import useCachedResources from './hooks/useCachedResources';
 import client from './config/client';
 import { AuthenticationProvider } from './hooks/useAuthentication';
 import Navigation from './navigation';
-import theme from 'constants/styles/theme';
 
 const App: React.FC = () => {
   const isLoadingComplete = useCachedResources();
@@ -18,7 +18,7 @@ const App: React.FC = () => {
   } else {
     return (
       <QueryClientProvider client={client}>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={themeRetroLink}>
           <SafeAreaProvider>
             <AuthenticationProvider>
               <Navigation />

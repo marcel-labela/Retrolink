@@ -77,7 +77,7 @@ export const RegisterScreen = ({ navigation }: i.RootTabScreenProps<'RegisterScr
 
   return (
     <Container placement="top">
-      <Heading size={18}>Register screen</Heading>
+      <Heading>Register screen</Heading>
       <Text size={16} margin="12px 0 12px">Register here for a new account</Text>
       <Controller
           name="username"

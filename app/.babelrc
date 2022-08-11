@@ -5,15 +5,17 @@
   ],
   "plugins": [
     "@babel/plugin-syntax-dynamic-import",
+    "babel-plugin-styled-components",
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-proposal-export-namespace-from",
-    "babel-plugin-styled-components",
     "module:react-native-dotenv",
     [
       "module-resolver",
       {
         "extensions": [".js", ".ts", ".tsx", ".ios.js", ".android.js", ".ios.ts", ".android.ts"],
         "alias": {
+          "common": "./components/common",
+          "common/*": "./components/common/*",
           "components": "./components",
           "components/*": "./components/*",
           "constants": "./constants",
@@ -35,7 +37,8 @@
           "queries": "./queries",
           "queries/*": "./queries/*",
           "modules": "./modules",
-          "modules/*": "./modules/*"
+          "modules/*": "./modules/*",
+          "styles": "./styles"
         }
       }
     ]

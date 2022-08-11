@@ -4,10 +4,10 @@ import { Heading } from 'components/common/typography';
 
 import { Container } from './styled';
 
-export const TopBar: React.FC<TopBarProps> = ({ title: string }) => {
+export const TopBar: React.FC<TopBarProps> = ({ title }) => {
   return (
     <Container>
-      <Heading>Title</Heading>
+      <Heading>{title}</Heading>
     </Container>
   );
 }

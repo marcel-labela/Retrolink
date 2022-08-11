@@ -11,7 +11,6 @@ import { Button } from 'components/interaction';
 import { Input } from '../../components/common/form/Input';
 import { InputPassword } from '../../components/common/form/InputPassword';
 
-//TODO: Schrijf een errorhandler voor de login functionaliteit.
 export const LoginScreen = ({ navigation }: i.RootTabScreenProps<'LoginScreen'>) => {
   const { login } = useAuthenticationActions();
   const { loading } = useAuthenticationUser();
@@ -51,7 +50,7 @@ export const LoginScreen = ({ navigation }: i.RootTabScreenProps<'LoginScreen'>)
 
   return (
     <Container placement="top">
-        <Heading size={18}>Login screen</Heading>
+        <Heading>Login screen</Heading>
         <Controller
           name="email"
           control={control}

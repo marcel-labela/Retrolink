@@ -27,7 +27,7 @@ export const Text = styled.Text<TextProps>`
 `;
 
 export type TextProps = {
-  color?: 'error' | 'white' | 'primary' | 'green' | 'secondary' | 'gray' | 'black';
+  color?: 'error' | 'white' | 'primary' | 'green' | 'secondary' | 'gray';
   align?: 'left' | 'center' | 'right';
   margin?: string;
   fullWidth?: boolean;

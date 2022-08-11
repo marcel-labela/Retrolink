@@ -29,5 +29,5 @@ export type FormFieldProps = {
   description?: string;
   error?: FieldError;
   active?: boolean;
-  children: any;
+  children?: React.ReactNode;
 };

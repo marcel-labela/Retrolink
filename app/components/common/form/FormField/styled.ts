@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/native';
 
-import { Text } from 'components/common/typography';
+import { Text } from 'common/typography';
 
 export const FormFieldsWrapper = styled.View`
   max-width: 100%;

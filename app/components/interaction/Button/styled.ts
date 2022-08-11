@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components/native';
-import { Text, TextProps } from 'components/common/typography';
+import { Text, TextProps } from 'common/typography';
 
 export const Container = styled.View<ContainerProps>`
   margin: ${({ margin }) => `${margin || '0px'}`};
@@ -20,7 +20,7 @@ export const ButtonPressable = styled.Pressable<ButtonPressableProps>`
   background-color: ${({ theme }) => theme.colors.primary};
   transition: opacity 500ms;
   ${({ variant }) => variant === 'secondary' && css`
-    background-color: ${({ theme }) => theme.colors.secondary};
+    background-color: ${({ theme }) => theme.colors.secondaryButton};
   `};
   ${({ variant }) => variant === 'transparent' && css`
     background-color: transparent;

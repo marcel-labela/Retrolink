@@ -2,7 +2,7 @@ import * as i from 'types';
 import * as React from 'react';
 import { TextInput } from 'react-native';
 
-import theme from 'constants/styles/theme';
+import theme from 'styles/theme';
 
 import { FormField } from '../FormField';
 import { StyledInput, InputWrapper, InputIcon } from './styled';
@@ -12,7 +12,7 @@ export const Input = React.forwardRef<TextInput, i.InputProps>(({
 }, ref) => {
   const [isFocus, setIsFocus] = React.useState(false);
   const active = isFocus || Boolean(value);
-  const IconComponent = icon as any;
+  const IconComponent = icon as React.ElementType;
 
   return (
     <FormField {...{ label, error, description, active }}>

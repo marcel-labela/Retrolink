@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-import { Text } from 'components/common/typography';
+import { Text } from 'common/typography';
 
 export const Label = styled(Text)`
   text-transform: uppercase;
