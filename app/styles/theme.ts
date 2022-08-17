@@ -6,7 +6,7 @@ import { StackHeaderOptions } from '@react-navigation/stack/lib/typescript/src/t
 const theme = {
   colors: {
     primary: '#562F94',
-    secondary: '#1B3A46',
+    secondary: '#212427',
     secondaryButton: '#33525D',
     black: '#212427',
     white: '#ffffff',
