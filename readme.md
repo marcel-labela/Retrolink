@@ -23,9 +23,11 @@ It's important to note that the admin dashboard will be able to make use of endp
 
 ### Retrolink api.
 A Express/Nodejs api build to interact with a Postgres database. I've build it with JWT authentication for all of the applications interaction with it.
+I've used docker to quickly spin up the server with a Postgres database. For the staging environment I will also deploy the docker container.
 
 - Express
 - Prisma ORM
+- Docker
 - Nodemailer
 
 ### Retrolink app

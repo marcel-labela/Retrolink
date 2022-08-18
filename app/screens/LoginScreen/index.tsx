@@ -11,7 +11,7 @@ import { Button } from 'components/interaction';
 import { Input } from '../../components/common/form/Input';
 import { InputPassword } from '../../components/common/form/InputPassword';
 
-import { FormContainer } from './styled';
+import { FormContainer, FooterContainer, ExtendedContainer } from './styled';
 
 export const LoginScreen = ({ navigation }: i.RootTabScreenProps<'LoginScreen'>) => {
   const { login } = useAuthenticationActions();
@@ -51,7 +51,7 @@ export const LoginScreen = ({ navigation }: i.RootTabScreenProps<'LoginScreen'>)
   const values = watch();
 
   return (
-    <Container placement="top" variant="purple" align="left">
+    <ExtendedContainer placement="top" variant="purple" align="left">
         <Heading variant="white">Login</Heading>
         <FormContainer>
           <Controller
@@ -87,21 +87,26 @@ export const LoginScreen = ({ navigation }: i.RootTabScreenProps<'LoginScreen'>)
               />
             )}
           />
-          <Button
-            label="Log in"
-            loading={loading}
-            disabled={loading || !values.password || !values.email}
-            onPress={handleSubmit(onSubmit)}
-          />
         </FormContainer>
-        <Text
-          margin="12px 0 0"
-          onPress={() => navigation.navigate('RegisterScreen')}
-          size={18}
-        >
-          Want to create a new account?
-        </Text>
-    </Container>
+        <FooterContainer>
+          <Button
+              label="Log in"
+              loading={loading}
+              disabled={loading || !values.password || !values.email}
+              onPress={handleSubmit(onSubmit)}
+              variant="secondary"
+            />
+            <Text
+              margin="12px 0 0"
+              onPress={() => navigation.navigate('RegisterScreen')}
+              size={18}
+              color="white"
+              align="center"
+            >
+              Want to create a new account?
+            </Text>
+        </FooterContainer>
+    </ExtendedContainer>
   );
 }
 
