@@ -1,8 +1,13 @@
 import styled from 'styled-components/native';
 
-export const Heading = styled.Text`
-  font-size: 24px;
+export const Heading = styled.Text<HeadingProps>`
+  font-size: 36px;
   font-family: ${({ theme }) => theme.fonts.regular['700']};
-  color: ${({ theme }) => theme.colors.secondary};
+  letter-spacing: 1.56px;
+  color: ${({ theme, variant }) => theme.colors[variant || 'black']};
   margin-bottom: 16px;
 `;
+
+type HeadingProps = {
+  variant?: 'white' | 'black';
+}

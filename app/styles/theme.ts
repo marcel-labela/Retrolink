@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs';
 import { DefaultTheme } from '@react-navigation/native';
 import { StackHeaderOptions } from '@react-navigation/stack/lib/typescript/src/types';
@@ -6,6 +5,9 @@ import { StackHeaderOptions } from '@react-navigation/stack/lib/typescript/src/t
 const theme = {
   colors: {
     primary: '#562F94',
+    purple: Object.assign('#472F94', {
+      medium: '#372571',
+    }),
     secondary: '#212427',
     secondaryButton: '#33525D',
     black: '#212427',
@@ -23,7 +25,7 @@ const theme = {
   },
   fonts: {
     regular: {
-      700: 'AvenirNext-Bold',
+      700: 'AvenirNext-Heavy',
       600: 'AvenirNext-Medium',
       500: 'AvenirNext-Regular',
       400: 'AvenirNext-Light',
