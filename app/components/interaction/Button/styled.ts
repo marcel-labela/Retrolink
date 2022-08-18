@@ -20,7 +20,9 @@ export const ButtonPressable = styled.Pressable<ButtonPressableProps>`
   background-color: ${({ theme }) => theme.colors.primary};
   transition: opacity 500ms;
   ${({ variant }) => variant === 'secondary' && css`
-    background-color: ${({ theme }) => theme.colors.secondaryButton};
+    background-color: ${({ theme }) => theme.colors.purple};
+    border: 1.5px solid ${({ theme }) => theme.colors.white};
+    border-radius: 15px;
   `};
   ${({ variant }) => variant === 'transparent' && css`
     background-color: transparent;
@@ -42,5 +44,5 @@ type ButtonPressableProps = {
 
 export const ButtonText = styled(Text)<TextProps>`
   font-family: ${({ theme }) => theme.fonts.regular['600']};
-  font-size: 16px;
+  font-size: 18px;
 `;

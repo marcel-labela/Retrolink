@@ -34,12 +34,16 @@ export const ScreenContainer = styled(KeyboardAwareScrollView).attrs(({
   ${({ variant }) => variant === 'secondary' && css`
     background-color: ${({ theme }) => theme.colors.gray.placeholder};
   `};
+
+  ${({ variant }) => variant === 'purple' && css`
+    background-color: ${({ theme }) => theme.colors.purple};
+  `}
 `;
 
 type ScreenContainerProps = {
   placement?: 'center' | 'top' | 'start' | 'bottom';
   align?: 'center' | 'left';
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'purple';
 };
 
 export const List = styled.View`

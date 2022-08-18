@@ -15,8 +15,8 @@ export const InputPassword = React.forwardRef<TextInput, i.InputProps>((props, r
       secureTextEntry={secureTextEntry}
       handleIconClick={() => setSecureTextEntry(!secureTextEntry)}
       icon={secureTextEntry
-        ? <EyeOpen fill={theme.colors.secondary} />
-        : <EyeClosed fill={theme.colors.secondary} />}
+        ? <EyeOpen fill={theme.colors.white} />
+        : <EyeClosed fill={theme.colors.white} />}
       {...props}
     />
   );

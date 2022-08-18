@@ -18,7 +18,7 @@ export const Container: React.FC<ContainerProps> = ({
 type ContainerProps = {
   placement?: 'center' | 'top' | 'start' | 'bottom';
   align?: 'left' | 'center';
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'purple';
   children?: any;
 };
 
