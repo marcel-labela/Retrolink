@@ -34,19 +34,22 @@ const theme = {
 };
 
 const tabBarTheme: BottomTabNavigationOptions = {
-  tabBarActiveTintColor: theme.colors.primary,
-  tabBarInactiveTintColor: theme.colors.secondary,
+  tabBarActiveTintColor: theme.colors.white,
+  tabBarInactiveTintColor: theme.colors.purple.medium,
   tabBarStyle: {
-    height: 65,
-    paddingHorizontal: 1,
-    backgroundColor: theme.colors.white,
+    paddingBottom: 18,
+    height: 78,
+    borderRadius: 14,
+    backgroundColor: theme.colors.primary,
     borderTopWidth: 0,
-    elevation: 0,
   },
   tabBarLabelStyle: {
-    fontFamily: theme.fonts.regular['500'],
-    fontSize: 12,
+    paddingHorizontal: 1,
+    fontSize: 14,
   },
+  tabBarIconStyle: {
+    bottom: -4,
+  }
 };
 
 const headerTheme: StackHeaderOptions = {

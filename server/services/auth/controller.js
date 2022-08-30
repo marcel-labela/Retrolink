@@ -89,7 +89,7 @@ module.exports = {
     } catch(error) {
       return res.status(400).send({
         status: 'failure',
-        message: error
+        message: error,
       });
     }
   },

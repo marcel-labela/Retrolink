@@ -11,6 +11,11 @@ type ContainerProps = {
   margin?: string;
 };
 
+export const ButtonText = styled(Text)<TextProps>`
+  font-family: ${({ theme }) => theme.fonts.regular['600']};
+  font-size: 18px;
+`;
+
 export const ButtonPressable = styled.Pressable<ButtonPressableProps>`
   justify-content: center;
   align-items: center;
@@ -28,7 +33,7 @@ export const ButtonPressable = styled.Pressable<ButtonPressableProps>`
     background-color: transparent;
   `};
   ${({ disabled }) => disabled && css`
-    background-color: ${({ theme }) => theme.colors.gray.light};
+    border: 1.5px solid ${({ theme }) => theme.colors.purple.medium};
   `}
   ${({ size }) => size === 'small' && css`
     height: 40px;
@@ -41,8 +46,3 @@ type ButtonPressableProps = {
   shadow?: boolean;
   variant?: 'primary' | 'secondary' | 'transparent';
 };
-
-export const ButtonText = styled(Text)<TextProps>`
-  font-family: ${({ theme }) => theme.fonts.regular['600']};
-  font-size: 18px;
-`;

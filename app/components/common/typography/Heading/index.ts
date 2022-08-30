@@ -5,7 +5,7 @@ export const Heading = styled.Text<HeadingProps>`
   font-family: ${({ theme }) => theme.fonts.regular['700']};
   letter-spacing: 1.56px;
   color: ${({ theme, variant }) => theme.colors[variant || 'black']};
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 `;
 
 type HeadingProps = {

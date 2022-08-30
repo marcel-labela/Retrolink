@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components/native';
 import { Container } from 'layout/Container';
 
-
 export const ExtendedContainer = styled(Container)`
   display: flex;
   flex-direction: column;
