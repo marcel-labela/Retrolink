@@ -26,8 +26,6 @@ const isAuthenticated = (req, res, next) => {
 const isAdmin = (req, res, next) => {
   const { payload } = req;
 
-  console.log('payload', payload);
-
   if (!payload.isAdmin) {
     res.status(401);
     throw new Error('🚫 Un-Authorized 🚫');
